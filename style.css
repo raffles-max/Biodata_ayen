@@ -26,7 +26,7 @@ body {
 /* PANEL KIRI */
 .left-panel {
   width: 35%;
-  background: #2f3e46;       /* warna gelap seperti CV */
+  background: #2f3e46;
   color: #ffffff;
   padding: 20px 15px;
 }
@@ -57,7 +57,16 @@ body {
 .left-section p {
   font-size: 12px;
   margin-bottom: 8px;
-  word-break: break-word;
+
+  /* 🔧 FIX UTAMA */
+  word-break: normal;        /* angka & teks pendek aman */
+  overflow-wrap: break-word; /* email panjang boleh turun */
+  line-height: 1.3;
+}
+
+/* Nomor HP jangan pecah */
+.phone {
+  white-space: nowrap;
 }
 
 /* PANEL KANAN */
